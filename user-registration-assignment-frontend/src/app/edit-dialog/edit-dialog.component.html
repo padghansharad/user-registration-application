@@ -1,0 +1,14 @@
+<form>
+  <div class="container">
+    <h6>Update User</h6>
+    <h1>Hi {{data.name}}</h1>
+    <label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Enter Name" name="name" [(ngModel)]="data.name" [value]="data.name" required>
+
+    <label for="address"><b>Address</b></label>
+    <input type="text" placeholder="Enter Address" name="address"[(ngModel)]="data.address" [value]="data.address"required>
+
+    <button mat-raised-button color="primary" type="submit" class="savebtn" (click)='updateUserDetails(data)'>Update</button> &nbsp;&nbsp;
+    <button mat-raised-button color="warn" type="submit" class="cancelbtn" (click)="cancelUserUpdate()">Cancel</button>
+  </div>
+</form>

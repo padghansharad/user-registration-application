@@ -1,0 +1,23 @@
+{
+  "name": "tsd-corp-assignment-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Server.js",
+  "dependencies": {
+    "cassandra-driver": "^3.5.0",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "hot-formula-parser": "^3.0.0",
+    "pg": "^7.4.1",
+    "regex": "^0.1.1",
+    "winston": "^2.4.1",
+    "winston-daily-rotate-file": "^3.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

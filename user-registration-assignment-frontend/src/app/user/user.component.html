@@ -1,0 +1,34 @@
+
+<form >
+        <div class="container">
+          <h3>User Registration Form</h3>
+          <label for="name"><b>Name</b></label>
+          <input type="text" placeholder="Enter Name" name="name" [(ngModel)]="user.name" required>
+      
+          <label for="address"><b>Address</b></label>
+          <input type="text" placeholder="Enter Address" name="address"[(ngModel)]="user.address" required>
+      
+          <button mat-raised-button color="primary" type="submit" class="savebtn" (click)='saveUserDetails()'>Save</button>
+          <button mat-raised-button color="warn" type="submit" class="cancelbtn" (click)='clearUserDetails()'>Cancel</button>
+        </div>
+      </form>
+
+    <h2>Registered Users</h2>
+    
+      <table id="users">
+          <tr>
+              <th>User ID</th>
+              <th>Name</th> 
+              <th>Address</th>
+              <th>Options</th>
+            </tr>
+          <tr *ngFor="let user of users">
+              <td> {{user.id}}</td>
+              <td> {{user.name}}</td>
+              <td> {{user.address}}</td>
+              <td><button mat-raised-button color="warn" (click)="deleteUser(user.id)">Delete</button> &nbsp;&nbsp;
+                <button mat-raised-button color="primary" (click)="openDialog(user)">Edit</button></td>
+          </tr>
+          
+        </table>
+    
